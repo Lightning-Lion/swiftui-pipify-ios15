@@ -81,9 +81,10 @@ public final class PipifyController: NSObject, ObservableObject, AVPictureInPict
         pipController?.requiresLinearPlayback = onSkip == nil
         
         pipController?.delegate = self
-      
-        //https://stackoverflow.com/questions/67528832/how-to-hide-system-controls-on-avpictureinpicturecontrollers-float-window#67528832
-        pipController?.setValue(1, forKey: "controlsStyle")
+        if #available(iOS 17.0, *) {//老系统上不知道能不能用，不管了
+          //https://stackoverflow.com/questions/67528832/how-to-hide-system-controls-on-avpictureinpicturecontrollers-float-window#67528832
+          pipController?.setValue(1, forKey: "controlsStyle")
+        }
     }
     
     @MainActor func setView(_ view: some View, maximumUpdatesPerSecond: Double = 30) {
