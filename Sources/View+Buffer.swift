@@ -5,7 +5,7 @@
 import SwiftUI
 import AVFoundation
 
-@available(macOS 13.0, *)
+@available(iOS 16.0,macOS 13.0, *)
 extension View {
     /// Creates a `CMSampleBuffer` containing the rendered view.
     func makeBuffer(renderer: ImageRenderer<some View>) async throws -> CMSampleBuffer {
