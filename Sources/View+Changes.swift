@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 public extension View {
     /// When the user uses the play/pause button inside the picture-in-picture window, the provided closure is called.
     ///
@@ -66,6 +67,7 @@ public extension View {
     }
 }
 
+@available(iOS 16.0, *)
 internal struct PipifyPlayPauseModifier: ViewModifier {
     @EnvironmentObject var controller: PipifyController
     let closure: (Bool) -> Void
@@ -81,6 +83,7 @@ internal struct PipifyPlayPauseModifier: ViewModifier {
     }
 }
 
+@available(iOS 16.0, *)
 internal struct PipifyRenderSizeModifier: ViewModifier {
     @EnvironmentObject var controller: PipifyController
     let closure: (CGSize) -> Void
@@ -93,6 +96,7 @@ internal struct PipifyRenderSizeModifier: ViewModifier {
     }
 }
 
+@available(iOS 16.0, *)
 internal struct PipifyStatusModifier: ViewModifier {
     @EnvironmentObject var controller: PipifyController
     let closure: (Bool) -> Void
@@ -105,6 +109,7 @@ internal struct PipifyStatusModifier: ViewModifier {
     }
 }
 
+@available(iOS 16.0, *)
 internal struct PipifySkipModifier: ViewModifier {
     @EnvironmentObject var controller: PipifyController
     let closure: (Bool) -> Void
@@ -119,6 +124,7 @@ internal struct PipifySkipModifier: ViewModifier {
     }
 }
 
+@available(iOS 16.0, *)
 internal struct PipifyBackgroundModifier: ViewModifier {
     @EnvironmentObject var controller: PipifyController
     @Environment(\.scenePhase) var scenePhase
@@ -133,6 +139,7 @@ internal struct PipifyBackgroundModifier: ViewModifier {
     }
 }
 
+@available(iOS 16.0, *)
 internal struct PipifyForegroundModifier: ViewModifier {
     @EnvironmentObject var controller: PipifyController
     @Environment(\.scenePhase) var scenePhase
@@ -147,6 +154,7 @@ internal struct PipifyForegroundModifier: ViewModifier {
     }
 }
 
+@available(iOS 16.0, *)
 internal struct PipifyProgressModifier: ViewModifier {
     @EnvironmentObject var controller: PipifyController
     @Binding var progress: Double
