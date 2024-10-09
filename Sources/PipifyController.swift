@@ -8,6 +8,7 @@ import AVKit
 import Combine
 import os.log
 
+@available(iOS 16.0, *)
 public final class PipifyController: NSObject, ObservableObject, AVPictureInPictureControllerDelegate,
                                        AVPictureInPictureSampleBufferPlaybackDelegate {
     
