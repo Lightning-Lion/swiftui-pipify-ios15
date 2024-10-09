@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 internal struct PipifyModifier<PipView: View>: ViewModifier {
     @Binding var isPresented: Bool
     @StateObject var controller: PipifyController = PipifyController()
