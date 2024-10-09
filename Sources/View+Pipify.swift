@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+@available(iOS 16.0, *)
 public extension View {
     
     /// Creates a Picture in Picture experience when given a SwiftUI view. This allows a view of your application to be presented over the top of the application
@@ -45,6 +46,7 @@ public extension View {
 /// Makes the Pipify view modifier available to Xcode's library allowing for improved auto-complete and discoverability.
 ///
 /// Reference: https://useyourloaf.com/blog/adding-views-and-modifiers-to-the-xcode-library/
+@available(iOS 16.0, *)
 struct PipifyLibrary: LibraryContentProvider {
     @State var isPresented: Bool = false
     
