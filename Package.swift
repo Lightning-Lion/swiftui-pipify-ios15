@@ -12,7 +12,7 @@ let package = Package(
         
         // We use string initialisers for versions in order to reduce the swift tools version required
         // (5.6 instead of 5.7). This is for SwiftPackageIndex.
-        .iOS("16.0.0"),
+        .iOS("15.0.0"),
         .macOS("13.0.0"),
         .tvOS("16.0.0"),
         .macCatalyst("16.0.0"),
